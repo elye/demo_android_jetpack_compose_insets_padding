@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeInsets">
         <activity
+            android:name=".AsPaddingActivity"
+            android:theme="@style/Theme.JetpackComposeInsets.NoActionBar" />
+        <activity
             android:name=".NavigationBarImePaddingActivity"
             android:theme="@style/Theme.JetpackComposeInsets.NoActionBar" />
         <activity

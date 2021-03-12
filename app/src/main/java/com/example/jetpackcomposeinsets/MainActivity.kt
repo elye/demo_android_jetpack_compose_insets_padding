@@ -55,7 +55,10 @@ class MainActivity : AppCompatActivity() {
                     }) {
                         Text("Navigation Bar IME Padding")
                     }
-                    MyButton(onClick = { /*TODO*/ }) {
+                    MyButton(onClick = {
+                        startActivity(Intent(this@MainActivity,
+                            AsPaddingActivity::class.java))
+                    }) {
                         Text("As Padding")
                     }
                 }
