@@ -22,7 +22,8 @@ class FitSystemWindowActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxSize()
                 ) {
                     ContentView()
-                }            }
+                }
+            }
         }
     }
 }
