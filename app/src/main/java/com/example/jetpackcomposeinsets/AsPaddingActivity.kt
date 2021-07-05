@@ -17,7 +17,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.core.view.WindowCompat
 import com.example.jetpackcomposeinsets.ui.theme.JetpackComposeInsetsTheme
-import dev.chrisbanes.accompanist.insets.*
+import com.google.accompanist.insets.LocalWindowInsets
+import com.google.accompanist.insets.ProvideWindowInsets
+import com.google.accompanist.insets.rememberInsetsPaddingValues
+import com.google.accompanist.insets.toPaddingValues
 
 class AsPaddingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,9 +40,10 @@ class AsPaddingActivity : AppCompatActivity() {
                             state = scroll,
                             modifier = Modifier
                                 .fillMaxSize(),
-                            contentPadding = LocalWindowInsets
-                                .current.systemBars.toPaddingValues()
-
+                            contentPadding = rememberInsetsPaddingValues(
+                                insets = LocalWindowInsets
+                                    .current.systemBars
+                            )
                         ) {
                             items(data) { data ->
                                 Text(
